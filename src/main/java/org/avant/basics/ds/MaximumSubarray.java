@@ -15,7 +15,7 @@ public class MaximumSubarray {
         System.out.println("D&C Approach");
         MaximumSubarray ms = new MaximumSubarray();
         ms.numArray = ex1Input;
-        System.out.println("Final: "+ms.findBestSubArray(0, ms.numArray.length-1));
+        System.out.println(ms.findBestSubArray(0, ms.numArray.length-1));
 
         ms.numArray = ex2Input;
         System.out.println(ms.findBestSubArray(0, ms.numArray.length-1));
@@ -63,7 +63,6 @@ public class MaximumSubarray {
         }
 
         int bestCombinedSum = numArray[mid] + bestLeftSum + bestRightSum;
-        System.out.println("bestCombinedSum: "+bestCombinedSum+", bestLeftSum: "+bestLeftSum+ ", bestRightSum: "+bestRightSum);
 
         int leftHalfBestSum = findBestSubArray(left, mid-1);
         int rightHalfBestSum = findBestSubArray(mid+1, right);
